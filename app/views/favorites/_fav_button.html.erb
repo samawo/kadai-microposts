@@ -6,6 +6,6 @@
 <% else %>
   <%= form_for(current_user.favorites.build) do |f| %>
     <%= hidden_field_tag :micropost_id,micropost.id %>
-    <%= f.submit "Fav",class: 'btn btn-danger btn-block' %>
+    <%= f.submit "Fav",class: 'btn btn-primary btn-block' %>
   <% end %>
 <% end %>  
