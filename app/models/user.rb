@@ -34,7 +34,7 @@ class User < ApplicationRecord
   
   
   
-  has_many :favorites ,class_name: "Favorite",foreign_key: "user_id"
+  has_many :favorites ,class_name: "Favorite",foreign_key: "user_id",dependent: :destroy
   has_many :favings ,through: :favorites,source: :micropost
   #has_many :reverses_of_favorite, class_name: "Favorite",foreign_key: "micropost_id"
   #has_many :favew, through: :reverses_of_favorite, source: :user
